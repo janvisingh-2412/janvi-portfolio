@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Data Projects | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=Geist:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f7f9fb",
+                    "error-container": "#ffdad6",
+                    "primary": "#000000",
+                    "surface-dim": "#d8dadc",
+                    "background": "#f7f9fb",
+                    "on-background": "#191c1e",
+                    "primary-fixed": "#dae2fd",
+                    "secondary": "#006c49",
+                    "surface-container-low": "#f2f4f6",
+                    "primary-container": "#131b2e",
+                    "on-surface-variant": "#45464d",
+                    "surface-container": "#eceef0",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "outline-variant": "#c6c6cd",
+                    "surface-tint": "#565e74",
+                    "inverse-surface": "#2d3133",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#00714d",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-secondary-fixed": "#002113",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#0b1c30",
+                    "tertiary": "#000000",
+                    "on-surface": "#191c1e",
+                    "secondary-container": "#6cf8bb",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "inverse-primary": "#bec6e0",
+                    "surface-bright": "#f7f9fb",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "secondary-fixed": "#6ffbbe",
+                    "outline": "#76777d",
+                    "surface-container-high": "#e6e8ea",
+                    "on-tertiary-container": "#75859d",
+                    "on-primary-container": "#7c839b",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "on-secondary-fixed-variant": "#005236",
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#d3e4fe",
+                    "inverse-on-surface": "#eff1f3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "gutter": "32px",
+                    "stack-lg": "128px",
+                    "stack-md": "64px",
+                    "stack-sm": "32px",
+                    "margin-mobile": "24px"
+            },
+            "fontFamily": {
+                    "display-xl": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "label-sm": ["Geist"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-md": ["30px", {"lineHeight": "38px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f7f9fb;
+            color: #191c1e;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-nav {
+            background: rgba(247, 249, 251, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .project-card-hover {
+            transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.4s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .project-card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .chip {
+            background-color: #F1F5F9;
+            color: #45464d;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-primary" href="#">Portfolio</a>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="portfolio_home.html">About</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="experience.html">Experience</a>
+<a class="font-label-sm text-label-sm text-primary font-bold border-b-2 border-primary pb-1" href="projects.html">Projects</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-stack-lg">
+<!-- Hero Section -->
+<header class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-stack-md">
+<div class="max-w-3xl">
+<div class="flex items-center gap-2 mb-4 text-secondary">
+<span class="material-symbols-outlined text-[20px]">database</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Specialization</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">
+                    Data Projects
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    A curated selection of technical work focused on extracting meaningful insights from complex datasets and building robust, data-driven systems that empower decision-making.
+                </p>
+</div>
+</header>
+<!-- Project Grid -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Project Card 1: Data Visualization -->
+<article class="md:col-span-12 lg:col-span-7 project-card-hover bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden flex flex-col">
+<div class="aspect-[16/9] w-full overflow-hidden bg-surface-variant">
+<img alt="Global Trade Dashboard" class="w-full h-full object-cover" data-alt="A high-fidelity data visualization dashboard displayed on a sleek monitor in a professional studio setting. The screen shows vibrant emerald and slate blue charts, including complex network graphs and real-time flow diagrams representing global trade. The lighting is soft and atmospheric, highlighting the crisp UI details and thin-lined typography. The overall mood is sophisticated, technical, and clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI2CyDnNWqleviGQpAPQ06V6Uy8sMyfFcEF8vWFAzKEOLt_tsllpapKh8UGmscJqhgBdx2xiduLow5o2g7eMNjZkXUjSUNlJNwd8Dk99KI1Do7p9Mv9QVrwwxviwR62D4LAoL4OZ4SI3cFMbq5rT4kiL3RIlh6e0yv8c2Q6GhhnmRueWr-l-7qsNmN8fFsZp2iiLDECdufVRA4BVkkX17J7Gt1z4ZD0ItVgaKCNF80e5UaQRcoip8k5OeltYL2K8kWSXrUTlpTNtd8"/>
+</div>
+<div class="p-stack-sm flex flex-col flex-grow">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="chip px-3 py-1 font-label-sm text-label-sm rounded-lg">D3.js</span>
+<span class="chip px-3 py-1 font-label-sm text-label-sm rounded-lg">React</span>
+<span class="chip px-3 py-1 font-label-sm text-label-sm rounded-lg">BigQuery</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3 text-2xl">Global Trade Intelligence Engine</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            An interactive visualization suite that maps international shipping lanes and trade volume in real-time. Built to help logistics firms identify bottlenecks before they impact the supply chain.
+                        </p>
+<a class="flex items-center gap-2 text-secondary font-bold hover:opacity-80 transition-opacity" href="#">
+                            View Case Study
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Project Card 2: Machine Learning -->
+<article class="md:col-span-6 lg:col-span-5 project-card-hover bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden flex flex-col">
+<div class="aspect-[4/3] w-full overflow-hidden bg-surface-variant">
+<img alt="Neural Network Visualization" class="w-full h-full object-cover" data-alt="Abstract 3D visualization of a neural network structure with glowing nodes connected by fine lines of emerald light against a deep slate background. The image has a shallow depth of field, making the foreground nodes appear sharp and crystalline while the background fades into a soft bokeh. The aesthetic is futuristic and highly technical, symbolizing deep learning and complex algorithmic processing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeYGO7XjPSurMJgtFBGiILlCJOsNStDgR0iW3vmm71gpouTKZrm_WyIdoaAHKvyOYggzz6r4XLxmYV_Hn9QEqKK2umsgsqFVq224s2yiDhoEm1-wxM_nEeivzyb7vmi99-LM_wjz9o9WLoVJhAo-DW4qNLbWv0faf0WHsGhUhoDmsJzE1VSJChcoLciJZLqBiRZ6gpfnp5UGjUgXM82dTosynyL4c4EOpjXpHlIUd8dJdSGqWSUvPJ7VNPYuPdzPsGROBuOJH9whrx"/>
+</div>
+<div class="p-stack-sm flex flex-col flex-grow">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="chip px-3 py-1 font-label-sm text-label-sm rounded-lg">Python</span>
+<span class="chip px-3 py-1 font-label-sm text-label-sm rounded-lg">PyTorch</span>
+<span class="chip px-3 py-1 font-label-sm text-label-sm rounded-lg">AWS</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3 text-2xl">Predictive Maintenance Model</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Developing a custom Transformer-based architecture to predict mechanical failure in industrial turbines with 94% accuracy. Reduced unplanned downtime by 30% during pilot testing.
+                        </p>
+<a class="flex items-center gap-2 text-secondary font-bold hover:opacity-80 transition-opacity" href="#">
+                            View Repository
+                            <span class="material-symbols-outlined">code</span>
+</a>
+</div>
+</article>
+<!-- Project Card 3: Analytical Dashboard -->
+<article class="md:col-span-6 lg:col-span-5 project-card-hover bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden flex flex-col">
+<div class="aspect-[4/3] w-full overflow-hidden bg-surface-variant">
+<img alt="Financial Dashboard" class="w-full h-full object-cover" data-alt="A clean, minimalist financial analytics dashboard displayed on a high-resolution laptop screen. The UI features elegant typography and a sophisticated color palette of white, slate, and emerald green. Bar charts and area graphs show growth trends with precision-engineered spacing. The environment is a brightly lit, modern office with soft natural light streaming in, creating an atmosphere of professional clarity and success." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs3j7RvTTh8LiuAO8aR6Slu6fj8TxxHxDZ0nZyVkj9SVf_BVyEBcAc8bjtEXE1bkkuiN2_zMORlavXtNOyLPmDNLlUrMxm3mgucDoIZREou127d_FRdKQ0jPaV0tyH6ZOslIvltngySoIoE2i7ulHMqQIMPYAFKP2uwNicP4DMr47EkcQbmYaJHTFAulkw3S8MlSDUWUcjnZZQqIV7uVh1olCwvEf7QPnQQZYq7KqkK2G9LvbH0cmXIG5HzpJ8aUSPIbtT5quLWxGY"/>
+</div>
+<div class="p-stack-sm flex flex-col flex-grow">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="chip px-3 py-1 font-label-sm text-label-sm rounded-lg">SQL</span>
+<span class="chip px-3 py-1 font-label-sm text-label-sm rounded-lg">Tableau</span>
+<span class="chip px-3 py-1 font-label-sm text-label-sm rounded-lg">Snowflake</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3 text-2xl">Enterprise SaaS Analytics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Comprehensive reporting architecture for a Series B startup, consolidating data from 12+ sources into a single source of truth for executive performance tracking.
+                        </p>
+<a class="flex items-center gap-2 text-secondary font-bold hover:opacity-80 transition-opacity" href="#">
+                            Exploration
+                            <span class="material-symbols-outlined">launch</span>
+</a>
+</div>
+</article>
+<!-- Project Card 4: Asymmetric Grid Element (Data Pipeline) -->
+<article class="md:col-span-12 lg:col-span-7 project-card-hover bg-primary-container text-on-primary-container rounded-lg overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-1/2 p-stack-sm flex flex-col justify-center">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-white/10 text-white/80 px-3 py-1 font-label-sm text-label-sm rounded-lg">Kafka</span>
+<span class="bg-white/10 text-white/80 px-3 py-1 font-label-sm text-label-sm rounded-lg">Airflow</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-3 text-2xl">Streaming ETL Pipeline</h3>
+<p class="font-body-md text-body-md text-on-primary-container mb-6 opacity-80">
+                            Engineering a high-throughput data pipeline processing 500k events/sec. Implemented schema registry and automated validation to ensure zero-loss data ingestion.
+                        </p>
+<a class="flex items-center gap-2 text-secondary-fixed font-bold hover:opacity-80 transition-opacity" href="#">
+                            Technical Deep-dive
+                            <span class="material-symbols-outlined">article</span>
+</a>
+</div>
+<div class="md:w-1/2 aspect-square md:aspect-auto bg-surface-dim overflow-hidden">
+<img alt="Server Room Infrastructure" class="w-full h-full object-cover" data-alt="A futuristic server room aisle with glowing green status lights reflecting off polished dark slate surfaces. The perspective is a low-angle leading line shot that emphasizes the scale of the infrastructure. The lighting is moody and cinematic, using cold blues and vibrant emerald highlights to create a sense of high-performance computing and secure data management. Professional photography style with high contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU3TWszuFIMuHNxCGShjB0fu0225GNRCdcOrYV_LrSEXc58ptL7ezs0w2JmE4FiJfsb9AFFkVt1tg5KCs-T_oYZ2ASVEHAyREhM1pZiX8xxgvjlsFAxI-Rvs6jdZDo_tpk6TFiveJuq0CRXGDAlIiZWUDf10-BhlnfvsBQo5c4bREsqvGcdc22GZpM9NMzmvZcPI-qhGfxE_ZCbG6OeUt9YIYAUviywDf99Gl5mVWUq-uRajmQWzs0GVGeOzHJ4pckp7arGV3EnuEc"/>
+</div>
+</article>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="bg-white border border-outline-variant p-stack-md rounded-lg max-w-4xl mx-auto shadow-sm">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Have a Data-Intensive Challenge?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-xl mx-auto">
+                    I'm currently open to collaborations on data engineering, ML modeling, and visualization projects. Let's build something insightful together.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="px-8 py-4 bg-primary text-on-primary font-bold rounded-lg hover:bg-secondary transition-colors duration-300">
+                        Get In Touch
+                    </button>
+<button class="px-8 py-4 border-2 border-outline-variant text-primary font-bold rounded-lg hover:border-secondary transition-colors duration-300">
+                        Download Portfolio PDF
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-8 py-stack-md border-t border-outline-variant/30">
+<div>
+<span class="font-headline-md text-headline-md font-bold text-primary">Portfolio</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2">© 2026 Portfolio. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="https://www.linkedin.com/in/janvi-singh-23547b398?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="https://github.com/janvisingh-2412">GitHub</a>
+
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('article').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(card);
+        });
+    </script>
+</body></html>

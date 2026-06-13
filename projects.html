@@ -1,0 +1,277 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio | Selected Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Hanken+Grotesk:wght@600;700&amp;family=Geist:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Hanken+Grotesk:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#006c49",
+                      "on-secondary-fixed": "#002113",
+                      "surface-container-highest": "#e0e3e5",
+                      "inverse-on-surface": "#eff1f3",
+                      "primary-fixed-dim": "#bec6e0",
+                      "outline": "#76777d",
+                      "surface-dim": "#d8dadc",
+                      "tertiary-fixed": "#d3e4fe",
+                      "on-secondary-container": "#00714d",
+                      "tertiary-fixed-dim": "#b7c8e1",
+                      "surface-container-low": "#f2f4f6",
+                      "surface-tint": "#565e74",
+                      "inverse-primary": "#bec6e0",
+                      "on-error-container": "#93000a",
+                      "error": "#ba1a1a",
+                      "inverse-surface": "#2d3133",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "primary-container": "#131b2e",
+                      "surface-variant": "#e0e3e5",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#0b1c30",
+                      "tertiary": "#000000",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#45464d",
+                      "on-secondary": "#ffffff",
+                      "background": "#f7f9fb",
+                      "primary": "#000000",
+                      "secondary-fixed": "#6ffbbe",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#eceef0",
+                      "on-primary-fixed": "#131b2e",
+                      "surface-bright": "#f7f9fb",
+                      "on-primary-container": "#7c839b",
+                      "tertiary-container": "#0b1c30",
+                      "surface": "#f7f9fb",
+                      "on-secondary-fixed-variant": "#005236",
+                      "on-background": "#191c1e",
+                      "secondary-fixed-dim": "#4edea3",
+                      "on-surface": "#191c1e",
+                      "error-container": "#ffdad6",
+                      "secondary-container": "#6cf8bb",
+                      "on-tertiary-fixed-variant": "#38485d",
+                      "surface-container-high": "#e6e8ea",
+                      "primary-fixed": "#dae2fd",
+                      "outline-variant": "#c6c6cd",
+                      "on-tertiary-container": "#75859d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "32px",
+                      "stack-sm": "32px",
+                      "stack-md": "64px",
+                      "stack-lg": "128px",
+                      "margin-mobile": "24px",
+                      "margin-desktop": "64px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "label-sm": ["Geist"],
+                      "display-xl": ["Hanken Grotesk"],
+                      "headline-md": ["Hanken Grotesk"],
+                      "body-lg": ["Inter"],
+                      "headline-lg-mobile": ["Hanken Grotesk"],
+                      "headline-lg": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                      "headline-md": ["30px", {"lineHeight": "38px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "32px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .project-card:hover .project-image {
+            transform: scale(1.02);
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .grid-custom {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 32px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl transition-all duration-300">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6">
+<a class="font-headline-md text-headline-md font-bold text-primary" href="#">Portfolio</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300" href="portfolio_home.html">About</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300" href="experience.html">Experience</a>
+<a class="font-label-sm text-label-sm text-primary border-b border-primary pb-1" href="projects.html">Projects</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact.html">Contact</a>
+</div>
+
+</div>
+</nav>
+<main class="pt-32 pb-stack-lg">
+<!-- Header Section -->
+<header class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-stack-md">
+<div class="max-w-3xl">
+<h1 class="font-display-xl text-display-xl mb-6 leading-none">Selected Works</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A curated collection of digital experiences, brand identities, and technical explorations focused on clarity and functional elegance.</p>
+</div>
+</header>
+<!-- Category Filters -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-stack-sm">
+<div class="flex flex-wrap gap-4 items-center">
+<a href="projects.html" class="px-5 py-2 bg-primary text-on-primary rounded-full font-label-sm text-label-sm">TECH PROJECTS&nbsp;</a>
+<a href="design_project.html" class="px-5 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-full font-label-sm text-label-sm">DESIGNING PROJECTS</a>
+<a href="data_projects.html" class="px-5 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-full font-label-sm text-label-sm">DATA PROJECTS</a>
+<a href="core_projects.html" class="px-5 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-full font-label-sm text-label-sm">CORE PROJECTS</a>
+</div>
+</section>
+<!-- Projects Grid (Bento/Asymmetric Style) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Feature Project -->
+<article class="md:col-span-12 group" style="--mouse-x: 728px; --mouse-y: 495px;">
+<a class="block relative overflow-hidden rounded-lg bg-surface-container-lowest border border-outline-variant hover:shadow-[0_20px_40px_rgba(15,23,42,0.05)] transition-all duration-500" href="#">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="relative overflow-hidden aspect-video lg:aspect-auto h-full">
+<img alt="Project Alpha" class="project-image w-full h-full object-cover transition-transform duration-700" data-alt="A clean high-fidelity mobile application interface displayed on a sleek black smartphone mockup. The UI features a minimalist dark mode aesthetic with deep slate backgrounds and emerald green accents. The lighting is soft and studio-quality, emphasizing the precision of the typography and the smooth glass textures of the device. The overall mood is sophisticated and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACC4VBJo68qemsCqaVi9pXq_RI4pKUiUWABSvXTCLxm5pJroPYU1wTSo62NaMotJA8mNkd0W3PqoBBuF-Un01eDi6KrW31XPiM08cSK_F7S_qpwJw7hO5ceI4bWZiOFkLLMlQz-PAyN_jiup7VUQr2FKohndikgr6FN-UHX5LeXraU3jYTvHfSKxuphzAPRRHXi2UuWgE8qrXstT-iYAbhjLlS62ezk-YCghGMZYyd7k3PQ4XMvIXWQ2zdXYSids54_EYN703mDgt3">
+</div>
+<div class="p-8 md:p-12 flex flex-col justify-center">
+<div class="flex gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-lg font-label-sm text-label-sm">Digital Product</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-lg font-label-sm text-label-sm">working</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-primary">AMAZON CLONE</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-lg">A comprehensive design system and mobile operating experience focused on hyper-productivity and cognitive load reduction for creative professionals.</p>
+<div class="flex flex-wrap gap-2 mb-10">
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">fiber_manual_record</span>HTML</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">fiber_manual_record</span>CSS</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">fiber_manual_record</span>JAVASCRIPT</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">fiber_manual_record</span>BACKEND&nbsp;</span><span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">fiber_manual_record</span>MONGO DB (storage)</span></div>
+<div class="flex items-center text-primary font-label-sm text-label-sm font-bold group-hover:gap-2 transition-all">
+                                    View Project <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</div>
+</div>
+</div>
+</a>
+</article>
+<!-- Project Two -->
+<article class="md:col-span-7 group" style="--mouse-x: 642px; --mouse-y: 677.199951171875px;">
+<a class="block bg-white border border-outline-variant rounded-lg overflow-hidden hover:shadow-[0_20px_40px_rgba(15,23,42,0.05)] transition-all duration-500 h-full" href="#">
+<div class="aspect-[16/10] overflow-hidden">
+<img alt="Project Beta" class="project-image w-full h-full object-cover transition-transform duration-700" data-alt="A minimalist brand identity system presented on premium stationery. The design features a bold black logo against a stark white background with secondary accents of deep forest green. Soft, natural light hits the edge of the textured paper, creating subtle shadows and a high-end tactile feel. The composition is clean, centered, and reflects a modern professional brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE-dD45z4F85OATKR2-So1AgkGZ-5ZOZHuUyPOHJi2GLddVUkQROaUNnBdtMnv6iR98TlhVb-no1GW7dEIiWMuENki-uXArsBwhgZGdm-mD1mVN7-qGEFU839MZYgO1ddMaH7kIRM-BPbmXXyUH0qyHw33GKuHC2AIkiO4PdTdMwn1xi1xvBsZevjsRpmLohmn23UJaLD8sX7zWpP_I0KnXe5PWM8AYIvlGppVvSfelFEOUpsg587U22jrke0Z_ly44XSo96rjqeBt">
+</div>
+<div class="p-8"><span class="font-label-sm text-label-sm text-secondary mb-2 block">Web Application</span><h3 class="font-headline-md text-headline-md text-primary mb-3">FLIGHT TRACKER SITE</h3><p class="font-body-md text-body-md text-on-surface-variant mb-4">A comprehensive real-time flight tracking and monitoring platform. Designed for high-precision data visualization and seamless user interaction for global aviation tracking.</p><ul class="mb-6 space-y-1"><li class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">check_circle</span> Real-time API integration</li><li class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">check_circle</span> Responsive geospatial dashboard</li><li class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">check_circle</span> Custom map styling</li></ul><div class="flex flex-wrap gap-2 mb-8"><span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">fiber_manual_record</span>React</span><span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">fiber_manual_record</span>Mapbox</span><span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">fiber_manual_record</span>Node.js</span></div><div class="flex items-center text-primary font-label-sm text-label-sm font-bold group-hover:gap-2 transition-all">VIEW PROJECT<span class="material-symbols-outlined ml-2">arrow_outward</span></div></div>
+</a>
+</article>
+<!-- Project Three -->
+<article class="md:col-span-5 group" style="--mouse-x: 74.33746337890625px; --mouse-y: 696.199951171875px;">
+<a class="block bg-white border border-outline-variant rounded-lg overflow-hidden hover:shadow-[0_20px_40px_rgba(15,23,42,0.05)] transition-all duration-500 h-full" href="#">
+<div class="aspect-square overflow-hidden bg-primary-container relative">
+<!-- Shader Background Placeholder for tech feel -->
+<div class="absolute inset-0 opacity-40">
+
+</div>
+<img alt="Project Gamma" class="project-image w-full h-full object-cover mix-blend-overlay transition-transform duration-700" data-alt="An abstract visualization of complex data structures and code snippets floating in a 3D digital space. The scene is rendered with high-contrast blacks and vibrant emerald green highlights, creating a technical and futuristic atmosphere. Low-angle lighting casts dramatic shadows, emphasizing the depth and precision of the digital landscape. The style is sharp, clean, and highly sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCht2Jy7R5pKt80riJV0vusxxOsPlrhDIrzVReB6EQ7UCKTX5WOTF_uwOeJul8BVOtp8vOGbXlnQoW3f5pZ8LMbEybGpFsmuN34dIhBbalUQt5HSQLyLokyHeVhtv1QHAFn9ioW0yI0YDnHxUWESXuycyC_qARYfzp-khg6VHz6FvRsUjQsJIil4ZMnUEkQrv-xusJXCEx7PNWJFYFZAbZDoIQ8UNFspXmWMYeJnHbI32NJpqrtwq3CPSTbmgI0jt2-AvtKmZniQ66A">
+</div>
+<div class="p-8">
+<span class="font-label-sm text-label-sm text-secondary mb-2 block">Intern project&nbsp;</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">HazardScope</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6"><b>HazardScope</b>&nbsp;is a 3D engineering visualization and analysis platform that enables users to simulate hazard scenarios, manage simulation data, and explore interactive safety zones through a modern DRDO-inspired dashboard. Built using frontend, express.js, Node.js, and MongoDB.</p>
+<div class="flex items-center text-primary font-label-sm text-label-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">view project&nbsp;<span class="material-symbols-outlined ml-2">code</span>
+</div>
+</div>
+</a>
+</article>
+<!-- Project Four -->
+<article class="md:col-span-6 group" style="--mouse-x: 534px; --mouse-y: 226.8624267578125px;">
+
+</article>
+<!-- Project Five -->
+<article class="md:col-span-6 group" style="--mouse-x: 549px; --mouse-y: 181.8624267578125px;">
+
+</article>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-stack-lg max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<div class="py-stack-md bg-primary-container rounded-xl px-margin-mobile relative overflow-hidden">
+<!-- Abstract BG -->
+<div class="absolute inset-0 opacity-10">
+
+</div>
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-white mb-6">Have a project in mind?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-10 max-w-xl mx-auto">I'm currently available for select freelance opportunities and full-time creative leadership roles.</p>
+<button class="px-10 py-4 bg-secondary text-on-secondary font-label-sm text-label-sm rounded-lg hover:opacity-90 transition-all transform hover:-translate-y-1">
+                        Let's Talk
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-sm flex flex-col md:flex-row justify-between items-center gap-6">
+<a class="font-headline-md text-headline-md font-bold text-primary" href="#">Portfolio</a>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2026 Portfolio. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="https://www.linkedin.com/in/janvi-singh-23547b398?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="https://github.com/janvisingh-2412">GitHub</a>
+
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="mailto:js3799162@gmail.com">Email</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll behavior for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-6');
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.add('py-6');
+                nav.classList.remove('py-4');
+                nav.classList.remove('shadow-sm');
+            }
+        });
+
+        // Add subtle hover tracking to project cards for high-end feel
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+
+
+</body></html>

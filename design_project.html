@@ -1,0 +1,309 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Designing Projects | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500&amp;family=Geist:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f7f9fb",
+                        "error-container": "#ffdad6",
+                        "primary": "#000000",
+                        "surface-dim": "#d8dadc",
+                        "background": "#f7f9fb",
+                        "on-background": "#191c1e",
+                        "primary-fixed": "#dae2fd",
+                        "secondary": "#006c49",
+                        "surface-container-low": "#f2f4f6",
+                        "primary-container": "#131b2e",
+                        "on-surface-variant": "#45464d",
+                        "surface-container": "#eceef0",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "outline-variant": "#c6c6cd",
+                        "surface-tint": "#565e74",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#00714d",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-secondary-fixed": "#002113",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#0b1c30",
+                        "tertiary": "#000000",
+                        "on-surface": "#191c1e",
+                        "secondary-container": "#6cf8bb",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "inverse-primary": "#bec6e0",
+                        "surface-bright": "#f7f9fb",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "secondary-fixed": "#6ffbbe",
+                        "outline": "#76777d",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary-container": "#75859d",
+                        "on-primary-container": "#7c839b",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "on-secondary-fixed-variant": "#005236",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#d3e4fe",
+                        "inverse-on-surface": "#eff1f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "gutter": "32px",
+                        "stack-lg": "128px",
+                        "stack-md": "64px",
+                        "stack-sm": "32px",
+                        "margin-mobile": "24px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "label-sm": ["Geist"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "32px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-md": ["30px", {"lineHeight": "38px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid #E2E8F0;
+        }
+        .project-card-shadow:hover {
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
+        }
+        .border-slate-subtle {
+            border-color: #E2E8F0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 dark:bg-surface/70 backdrop-blur-xl">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                Portfolio
+            </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="portfolio_home.html">About</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="experience.html">Experience</a>
+<a class="font-label-sm text-label-sm text-primary font-bold border-b-2 border-primary pb-1" href="projects.html">Projects</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+</div>
+<button class="md:hidden p-2 text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-stack-lg">
+<!-- Hero Section -->
+<header class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-stack-md">
+<div class="max-w-3xl">
+<h1 class="font-display-xl text-display-xl mb-stack-sm text-primary">
+                    Designing Projects
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    A curated collection of visual experiences ranging from digital interfaces to holistic brand identities. We focus on creating intentional designs that balance technical precision with emotional resonance.
+                </p>
+</div>
+</header>
+<!-- Project Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Project Card 1: Modern Retail Interface -->
+<article class="group cursor-pointer">
+<div class="bg-surface-container-lowest border border-slate-subtle rounded-xl overflow-hidden project-card-shadow transition-all duration-500 flex flex-col h-full" style="transform: translateY(0px);">
+<div class="aspect-[4/5] overflow-hidden"><img alt="Modern Retail Interface" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHqgyndZkg-xBaV05UrAWSR8nlzV20aYGlMrUSRkGIupXzftn7aWBT3CkHoIVxD7pbEBPVbUpLHu87D3HCsbmX2NF42UWVqw1pYrnuyR1e6jw-IZzIo4qxsJ5J5hFauEoxhcLHUSHuZs345nqiIg0H1ApRKuUL3nTOx-G1QIwK5wEPN46PgpGNJ-Hu4ssEwPS7lST1kDyN3wFQN3cqAh1xbLJMZXN99zvYd5aV2CRsfgX0MfRY4e0mRHRpo9NPYMBrXLwBswfFcLpZtVE"></div>
+<div class="p-6 flex-grow">
+
+<h3 class="font-headline-md text-2xl text-primary mb-3">Modern Retail Interface</h3>
+
+</div>
+<div class="p-6 pt-0 mt-auto flex flex-wrap gap-4 border-t border-slate-subtle/50 pt-4">
+<a class="text-label-sm font-bold text-primary hover:text-secondary transition-colors flex items-center gap-1" href="#"><a class="text-label-sm font-bold text-primary hover:text-secondary transition-colors" href="https://app-companion-430619.appspot.com/projects/17540112902655509920?usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.ch0Jz-JlMrQ.O%2Fd%3D1%2Frs%3DAHpOoo_YD4KoV8fTh_kLhktsiThAm3yJ5A%2Fm%3D__features__#" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; color: rgb(0, 0, 0); --tw-text-opacity: 1; outline: none !important; box-shadow: none !important;">View Project</a><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+
+</div>
+</div>
+</article>
+<!-- Project Card 2: Nexus Systems -->
+<article class="group cursor-pointer">
+<div class="bg-surface-container-lowest border border-slate-subtle rounded-xl overflow-hidden project-card-shadow transition-all duration-500 flex flex-col h-full" style="transform: translateY(0px);">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Nexus Systems Brand Identity" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN0bGw-51FjpRwx9e16qm8MaAfsOw-3mP6h-PJqGPruTCgzqlDLnACqkqGh9Hj44wGvptfeH5kr0-Yq2VxO0IwxAniz6edVWr-AJwEOIqsgBiXkYu421CVyIhlsZZpFDfLsEiN646m0XSyfcJepDoLYVSOnwbOrr84v7nn8jshc5WRwu1zoNbvRfdq54Fvx_KZtEmQMy1aou3UEAO_C_A7XvDjhKB5j5_RU6O3w3sAuUdinxujXypbZg38WZgaMWs1aKf3hGX-dQLrTu0">
+</div>
+<div class="p-6 flex-grow">
+
+<h3 class="font-headline-md text-2xl text-primary mb-3">Nexus Systems</h3>
+
+</div>
+<div class="p-6 pt-0 mt-auto flex flex-wrap gap-4 border-t border-slate-subtle/50 pt-4">
+<a class="text-label-sm font-bold text-primary hover:text-secondary transition-colors flex items-center gap-1" href="#"><a class="text-label-sm font-bold text-primary hover:text-secondary transition-colors" href="https://app-companion-430619.appspot.com/projects/17540112902655509920?usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.ch0Jz-JlMrQ.O%2Fd%3D1%2Frs%3DAHpOoo_YD4KoV8fTh_kLhktsiThAm3yJ5A%2Fm%3D__features__#" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; color: rgb(0, 0, 0); --tw-text-opacity: 1; outline: none !important; box-shadow: none !important;">View Project</a><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+
+</div>
+</div>
+</article>
+<!-- Project Card 3: Kinetic Typography -->
+<article class="group cursor-pointer">
+<div class="bg-surface-container-lowest border border-slate-subtle rounded-xl overflow-hidden project-card-shadow transition-all duration-500 flex flex-col h-full" style="transform: translateY(0px);">
+<div class="aspect-[4/5] relative overflow-hidden bg-primary-container"><img alt="Kinetic Typography" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoltNBZ013n3VmYprYWqeejPslKR2nRUS16JDGXv2MbO1GhYFaWX6jG5NNAHRHi-STrcJoKPFYRX_ickAHo92RVBxvAogR266iH7Aq3hyxosAap2rcti700Vei5n2jRfWO_ZR_X0D0cGNNjKJKuMti7OvVBOuU2OP2Ohk5o3tYGDYz3Z2c7yD2IAGQ5LlUeNB12rXS9ihFa4sZozt4W6wE_WOZyWg6J2ncojNL882o6tYr3LizZ0k_iBq5XJZT7iv1WOt1XUqo8fgv-KM"></div>
+<div class="p-6 flex-grow">
+
+<h3 class="font-headline-md text-2xl text-primary mb-3">Kinetic Typography</h3>
+
+</div>
+<div class="p-6 pt-0 mt-auto flex flex-wrap gap-4 border-t border-slate-subtle/50 pt-4">
+<a class="text-label-sm font-bold text-primary hover:text-secondary transition-colors flex items-center gap-1" href="#"><a class="text-label-sm font-bold text-primary hover:text-secondary transition-colors" href="https://app-companion-430619.appspot.com/projects/17540112902655509920?usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.ch0Jz-JlMrQ.O%2Fd%3D1%2Frs%3DAHpOoo_YD4KoV8fTh_kLhktsiThAm3yJ5A%2Fm%3D__features__#" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; color: rgb(0, 0, 0); --tw-text-opacity: 1; outline: none !important; box-shadow: none !important;">View Project</a><span class="material-symbols-outlined text-[16px]">play_arrow</span></a>
+
+</div>
+</div>
+</article>
+<!-- Project Card 4: Flow Component Library -->
+<article class="group cursor-pointer">
+<div class="bg-surface-container-lowest border border-slate-subtle rounded-xl overflow-hidden project-card-shadow transition-all duration-500 flex flex-col h-full" style="transform: translateY(0px);">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Flow Component Library" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTUFrcn5qpdlOnuJq1ed_RuVhvtBT2rKmHpHNSQVeFDFLWihRxX8LD0YdKXjSJqGFAcyrztE_lG5TOee43d9uI0CAsXyO1lWqsuiuvDpaC5QDAJu0f4-UEj2yPxaSTQNycFDDR1iZtouyqWvyWkhMDyZFB7xHZAHSAsLw1zzIO1jgYmhESxkFZu1Ag7Hem6jnIMS82TtmqccJMFGnW42leOD9NaRhalFHaXckq3x05xNGW95oK6DhE1A0wa9KtVBRDOgXpw5Y-hHfgepk">
+</div>
+<div class="p-6 flex-grow">
+
+<h3 class="font-headline-md text-2xl text-primary mb-3">Flow Component Library</h3>
+
+</div>
+<div class="p-6 pt-0 mt-auto flex flex-wrap gap-4 border-t border-slate-subtle/50 pt-4">
+<a class="text-label-sm font-bold text-primary hover:text-secondary transition-colors" href="#">View Project</a>
+
+
+</div>
+</div>
+</article>
+<!-- Project Card 5: Zen Wellness App -->
+<article class="group cursor-pointer">
+<div class="bg-surface-container-lowest border border-slate-subtle rounded-xl overflow-hidden project-card-shadow transition-all duration-500 flex flex-col h-full" style="transform: translateY(0px);">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Zen Wellness App" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt5fdG4Bjaln9MRx8LdvEuJuqwilGMiSOzKTvRUx_lDHgBlbBpDhdS_pcgRp_8RhU--xefzY1dOgzcrjBXHbj0Xcb3FNj-PEmhDwICWPN9TNBhLemg_yhzP0X-TyE6FMHLNuIiZ0fEm2u-ekEJdoGy3C7RHdf5nTx8CDtoyTXQzVikdRaZxT_xCY_136hc8UhRzw4ztJzHhvkiZRo-8O79KGdOniw778-FkbYN7LGcKUsU_ujeIDmGcp4iBEmAQfhmXztvuRZUoFPXOgs">
+</div>
+<div class="p-6 flex-grow">
+
+<h3 class="font-headline-md text-2xl text-primary mb-3">Zen Wellness App</h3>
+
+</div>
+<div class="p-6 pt-0 mt-auto flex flex-wrap gap-4 border-t border-slate-subtle/50 pt-4">
+<a class="text-label-sm font-bold text-primary hover:text-secondary transition-colors" href="#">View Project</a>
+
+</div>
+</div>
+</article>
+<!-- Project Card 6: Artisan Coffee Rebrand -->
+<article class="group cursor-pointer">
+<div class="bg-surface-container-lowest border border-slate-subtle rounded-xl overflow-hidden project-card-shadow transition-all duration-500 flex flex-col h-full" style="transform: translateY(0px);">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Artisan Coffee Rebrand" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB74XOV6vU7j_WeY__oqpmL7aN220FGZtpJZHAtgt1h_-GAT-M1V5o8piqk2vsO0RhnmRKB-lDwgfR37L_9q8QOKkW_pooECGaxCj8Zyd5JMJtD2I4iU7Mc0kYkuw0oUkS6pQ-jkCh8zuz2UVZQGsXvGjU65bMWYej3bchL3XswLu22bei48lQDF4NIS0KcAkzunFiL6EZZkM6VSS2qkZSJZCxazSjEP8YAjhfC2rInp_hCvccmJ1IauJhr35KA5v9k7Z1I55zFV0wgg9w">
+</div>
+<div class="p-6 flex-grow">
+
+<h3 class="font-headline-md text-2xl text-primary mb-3">Artisan Coffee Rebrand</h3>
+
+</div>
+<div class="p-6 pt-0 mt-auto flex flex-wrap gap-4 border-t border-slate-subtle/50 pt-4">
+<a class="text-label-sm font-bold text-primary hover:text-secondary transition-colors" href="#">View Project</a>
+
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-stack-lg max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-primary p-12 md:p-24 rounded-xl relative overflow-hidden">
+<div class="relative z-10 text-center max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-6">Ready to start a project?</h2>
+<p class="font-body-lg text-body-lg text-outline-variant mb-10">
+                        Whether it's a digital product or a brand overhaul, let's create something extraordinary together.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-lg font-bold hover:brightness-110 transition-all w-full sm:w-auto">
+                            Get in Touch
+                        </button>
+
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface border-t border-slate-subtle">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-md max-w-container-max mx-auto gap-8">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                Portfolio
+            </div>
+<div class="flex gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="https://www.linkedin.com/in/janvi-singh-23547b398?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="https://github.com/janvisingh-2412">GitHub</a>
+
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                © 2026 Portfolio. All rights reserved.
+            </div>
+</div>
+</footer>
+<script>
+        // Subtle hover interaction for project cards
+        document.querySelectorAll('article').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const inner = card.querySelector('.project-card-shadow');
+                if (inner) inner.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                const inner = card.querySelector('.project-card-shadow');
+                if (inner) inner.style.transform = 'translateY(0px)';
+            });
+        });
+
+        // Simple smooth header behavior
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+
+
+</body></html>
